@@ -4,14 +4,14 @@
 
 <h1>New Realeses</h1>
 
-@if (release is null)
+@if (releases is null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
     <div class="row">
-        @foreach (var newRelease in release)
+        @foreach (var newRelease in releases)
         {
             <div class="card m-1" style="width:350px">
                 <div class="card-body">
