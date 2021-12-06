@@ -13,14 +13,7 @@ else
     <div class="row">
         @foreach (var newRelease in releases)
         {
-            <div class="card m-1" style="width:350px">
-                <div class="card-body">
-                    <img src="@newRelease.ImageUrl" width="300" height="300" alt="Album picture">
-                    <h5 class="card-title">@newRelease.Name</h5>
-                    <h6 class="card-subtitle">@newRelease.Artist</h6>
-                    <p class="card-text">@newRelease.Date</p>
-                </div>
-            </div>
+            <_NewReleases NewReleaseDto = "@newRelease"/>
         }
     </div>
 }

@@ -1,0 +1,14 @@
+﻿<div class="card m-1" style="width:350px">
+    <div class="card-body">
+        <img src="@NewReleaseDto.ImageUrl" width="300" height="300" alt="Album picture">
+        <h5 class="card-title">@NewReleaseDto.Name</h5>
+        <h6 class="card-subtitle">@NewReleaseDto.Artist</h6>
+        <p class="card-text">@NewReleaseDto.Date</p>
+    </div>
+</div>
+
+@code{
+    [Parameter]
+    public NewReleaseDto? NewReleaseDto { get; set; }
+}
+
