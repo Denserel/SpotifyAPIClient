@@ -1,6 +1,6 @@
 ﻿namespace SpotifyAPIClient.Dtos
 {
-    public class NewReleaseDto
+    public class AlbumDto
     {
         public string ImageUrl { get; set; }
         public string Name { get; set; }

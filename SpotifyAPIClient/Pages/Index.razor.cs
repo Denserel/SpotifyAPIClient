@@ -11,7 +11,7 @@ public partial class Index
     [Inject]
     IApiService apiService { get; set; }
     
-    private IEnumerable<NewReleaseDto> releases;
+    private IEnumerable<AlbumDto> releases;
     
     protected override async Task OnInitializedAsync()
     {
@@ -27,9 +27,9 @@ public partial class Index
 
     }
 
-    private IEnumerable<NewReleaseDto> NewReleaseToDto(NewReleases newReleases)
+    private IEnumerable<AlbumDto> NewReleaseToDto(NewReleases newReleases)
     {
-        var releases = newReleases.albums.items.Select(item => new NewReleaseDto
+        var releases = newReleases.albums.items.Select(item => new AlbumDto
         {
             ImageUrl = item.images.FirstOrDefault().url,
             Name = item.name,

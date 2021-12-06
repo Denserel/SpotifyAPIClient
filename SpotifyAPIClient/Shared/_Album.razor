@@ -1,0 +1,23 @@
+﻿<div class="card bg-dark" style="width:360px">
+    <div class="card-body text-white">
+        <img src="@Album.ImageUrl" class="card-img" alt="Album picture">
+        <h5 class="card-title">@Album.Name</h5>
+        <h6 class="card-subtitle">@Album.Artist</h6>
+        <p class="card-text">@Album.Date</p>
+    </div>
+</div>
+
+@*<div class="card bg-dark text-white" style="width:20rem">
+  <img src="@Album.ImageUrl" class="card-img" alt="Album picture">
+  <div class="card-img-overlay">
+    <h5 class="card-title">@Album.Name</h5>
+    <p class="card-text">@Album.Artist</p>
+    <p class="card-text">@Album.Date</p>
+  </div>
+</div>*@
+
+@code{
+    [Parameter]
+    public AlbumDto? Album { get; set; }
+}
+
